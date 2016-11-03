@@ -17,8 +17,7 @@
     if (self) {
         _name = name;
         _age = &age;
-        _hasVaidHealthCard = healthCard;
-        
+        _hasValidHealthCard = healthCard;
         _prescriptions = [NSMutableArray new];
         
     }

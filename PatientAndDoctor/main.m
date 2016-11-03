@@ -14,12 +14,12 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         Doctor *drHouse = [[Doctor alloc] initWithName:@"Dr.House" andSpecialization:@"Internal Medicine"];
-        
         Doctor *drDre = [[Doctor alloc] initWithName:@"Dr.Dre" andSpecialization:@"Gangasta Rap"];
-        
         Patient *oldMan = [[Patient alloc] initWithName:@"Old man Frank" age:83 andHasValidHealthCard:true];
-        
         Patient *patientZero = [[Patient alloc] initWithName:@"Patient 0" age:14 andHasValidHealthCard:false];
+        
+        
+        patientZero.symptoms = [NSSet setWithObjects:@"Migrane", nil];
         
         [patientZero visitDoctor:drDre];
         
@@ -28,6 +28,10 @@ int main(int argc, const char * argv[]) {
         oldMan.symptoms = [NSSet setWithObjects:@"Arthritis", @"Pink Eye", nil];
         
         [drHouse requestMeds:oldMan];
+        
+        patientZero.hasValidHealthCard = true;
+        
+        [patientZero visitDoctor:drHouse];
         
         [drHouse requestMeds:patientZero];
         

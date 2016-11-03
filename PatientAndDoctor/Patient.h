@@ -14,7 +14,7 @@
 
 @property (nonatomic, assign) int *age;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic) BOOL hasVaidHealthCard;
+@property (nonatomic) BOOL hasValidHealthCard;
 @property (nonatomic, strong) NSSet *symptoms;
 @property (nonatomic, strong) NSMutableArray *prescriptions;
 

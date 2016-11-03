@@ -37,7 +37,7 @@
 
 -(void)canAcceptPatient:(Patient *)patient {
     
-    if (patient.hasVaidHealthCard) {
+    if (patient.hasValidHealthCard) {
         [self.acceptedPatients addObject:patient];
         
         NSLog(@"%@", [NSString stringWithFormat:@"\n%@ has been accepted by %@", patient.name, self.name]);
@@ -65,7 +65,6 @@
             [patient.prescriptions addObject:[self.medications objectForKey:symptom]];
     
             NSLog(@"\n%@ has been perscribed %@ by %@", patient.name, [self.medications objectForKey:symptom], self.name);
-            
         }
     } else {
         NSLog(@"\n%@ cannot perscribe any medication to %@", self.name, patient.name);
